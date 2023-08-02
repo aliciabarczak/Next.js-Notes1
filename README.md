@@ -118,7 +118,8 @@ If you want to generate a page which is based on some sorting criteria, one way 
 
 ## Get Static Props
 
- - executed once at built time - same applies to the component it serves if it serves static content
+ - executed once at built time
+ - does not run on the server which serves the application but rather a local node.js sever (created by Next) which builds the app on your machine when the application is built/you execute npm run build. The static files are then hosted. 
  - during the built process, it runs before the component it serves;
  - only ever runs on the server unlike the component it serves which will be part of the client code;
  - any imports used only within getStaticProps will be stripped out of the client bundle/allows for easy code splitting

@@ -116,7 +116,6 @@ If you want to generate a page which is based on some sorting criteria, one way 
 ## Get Static Props
 
  - executed once at built time
- - does not run on the server which serves the application but rather a local node.js sever (created by Next) which builds the app on your machine when the application is built/you execute npm run build. The static files are then hosted. 
  - during the built process, it runs before the component it serves;
  - only ever runs on the server unlike the component it serves which will be part of the client code;
  - any imports used only within getStaticProps will be stripped out of the client bundle/allows for easy code splitting
@@ -141,6 +140,9 @@ If you want to generate a page which is based on some sorting criteria, one way 
 
  - You can further see the output of the build command in the .next folder. In the server subfolder you should have all of the html files which have been generated at build time.  
  - npm start - This will start the production ready page with a node.js server locally.
+
+## Hosting implications
+- none as does not run on the server which serves the application but rather a local node.js sever (created by Next) which builds the app on your machine when you execute npm run build. The static files are then hosted so no special node.js server hosting capability is required. 
 
  # Incremental Static Generation 
 

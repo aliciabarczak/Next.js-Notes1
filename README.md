@@ -125,7 +125,12 @@ If you want to generate a page which is based on some sorting criteria, one way 
 
    ![screenshot-gluki udemy com-2023 08 02-11_31_19](https://github.com/aliciabarczak/NC_NEWS_NEXTJS/assets/101208108/439b7805-a075-4586-8ab2-720e0a2403ed)
 
- 
+ ### notFound key
+ - accepts a boolean 
+ - if set to true, will render 404 page - why would you want that? It allows you to return an error page if for whatever reason the data you are fetching inside of the getStaticProps does not return the expected data.
+   
+   ![screenshot-gluki udemy com-2023 08 02-13_49_17](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/296aa1ef-295f-4e2b-a830-1e12474a1228)
+
 ## Build Process 
 
  - executing the build script will build the 'optimized production build'

@@ -158,3 +158,8 @@ If you want to generate a page which is based on some sorting criteria, one way 
 
  - Alternative to using this method would be to use Static Generation for the initial load and then on the client, use useEffect to fetch any updates to the page from the server;
 
+## Syntax 
+
+![screenshot-gluki udemy com-2023 08 02-13_37_47](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/c28d11a0-a363-4bc7-84f0-cba5e408256f)
+
+YOU CAN ALWAYS CHECK WHETHER NEXT HAS PICKED UP THE KEY BY RUNNING THE BUILD AND MAKING SURE THAT THE OUTPUT IN THE TERMINAL REGISTERED THAT ISG HAS BEEN INTRODUCED FOR THAT PAGE AND THEREFORE THE PAGE WILL BE RE-GENERATED AS PER THE INTERVAL SPECIFIED.

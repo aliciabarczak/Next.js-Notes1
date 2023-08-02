@@ -131,6 +131,12 @@ If you want to generate a page which is based on some sorting criteria, one way 
    
    ![screenshot-gluki udemy com-2023 08 02-13_49_17](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/296aa1ef-295f-4e2b-a830-1e12474a1228)
 
+### redirect key
+
+ - allows you to redirect the user to another page rather than showing the content of the page
+   
+ ![screenshot-gluki udemy com-2023 08 02-13_53_19](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/8ba44218-41d4-4af2-ab3b-45913ce19d6b)
+
 ## Build Process 
 
  - executing the build script will build the 'optimized production build'

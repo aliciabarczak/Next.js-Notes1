@@ -6,11 +6,9 @@
 
 ![screenshot-gluki udemy com-2023 07 31-11_57_09](https://github.com/aliciabarczak/NC_NEWS_NEXTJS/assets/101208108/393a9c3e-1173-4a05-b7e7-19d3d2077944)
 
-## Gaining access to dynamic values in dynamic routing
+##  In a route "domain.com/somehting/[id] - how do you get access to id?
 
 ### Client Side
-
- - in a route "domain.com/somehting/[id] - how do you get access to id?
  - you can use the Next useRouter hook which is imported from the next/router package - this is a React hook defined by the Next.js team that can be used in any functional component (you can us withRouter HOC if working with class components)
  - the useRouter hook provides various data and methods: 
 
@@ -21,7 +19,14 @@
 
 ![screenshot-gluki udemy com-2023 07 31-12_35_30](https://github.com/aliciabarczak/NC_NEWS_NEXTJS/assets/101208108/d3e40423-4ee0-4071-a8ad-b4f8744c43a3)
 
-On the client side, it would also make sense to handle what happens if the data that is being fetched is either loading or unavalibale. Can use an if statement for that. 
+On the client side, it would also make sense to handle what happens if the data that is being fetched is either loading or unavailable. Can use an if statement for that. 
+
+### Server Side
+
+ - you can use the context prop available in getStaticProps and getServerSideProps to gain access to the value.
+ - for example,  if there is a [pid] file, the way to access the pid value would be as such:
+   
+<img width="1413" alt="Screenshot 2023-08-03 at 10 13 22" src="https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/6cb72101-9a52-4aa4-b568-2775509b3f72">
 
 ### Catch all Routes
 

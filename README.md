@@ -180,7 +180,7 @@ If you want to generate a page which is based on some sorting criteria, one way 
 
 YOU CAN ALWAYS CHECK WHETHER NEXT HAS PICKED UP THE KEY BY RUNNING THE BUILD AND MAKING SURE THAT THE OUTPUT IN THE TERMINAL REGISTERED THAT ISG HAS BEEN INTRODUCED FOR THAT PAGE AND THEREFORE THE PAGE WILL BE RE-GENERATED AS PER THE INTERVAL SPECIFIED.
 
-##  getStaticPaths
+#  getStaticPaths
 
 - in dynamic pages - pages like [id] for example - the default behaviour is that these pages are not pre-generated in advance. Instead, they are generated **at run time when a request for the page is made**. In other words: you make http req for domain.com/products/173664 and Next can use this request to generate the page on the server using the concrete value of "173664"/fetch any data for that page and send it back. 
 - This is because of their dynamic nature Next does not know what concrete value will replace [id] until the request is made. Next also does not know how many pages will need to be generated in advance and the default behaviour is such, that it does not need to know this. Therefore if you are fetching data in the regular react component or using serverSideProps, the default behaviour is preserved and each [id] page is generated at runtime. Even if you are not using any dynamic data, the default behaviour will persist and the page will be generated at run time.  - YOU CAN CONFIRM THIS BY RUNNING NPM BUILD

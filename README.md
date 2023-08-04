@@ -235,3 +235,7 @@ this is therefore a little bit like fetching on the client side but you dont act
  - syntax: returns the same object as getStaticProps but for the invalidate key which is not needed.
 
 ![screenshot-gluki udemy com-2023 08 04-11_14_40](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/113eb747-371f-4369-a44d-0390d2f924c9)
+
+## getStaticProps in dynamic pages 
+
+ - you just use getServerSide props and extract the params in the same way from the context prop except you do not need getStaticPaths because this runs on the server upon request and is not pre-generated. 

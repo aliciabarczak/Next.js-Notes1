@@ -214,12 +214,15 @@ GENERATED DYNAMICALLY:
 - allows you to pre-generate highly visited pages and postpone generation of less visited pages until they are needed.
 - for example, if you are running a blog, there is no point pre-generating blog pages that are never read as that's a waste of resources. Or on e-commerce website with millions of products, it would be very time consuming to pre-generate pages for all of the products. 
 - if you do not want to pre-generate all pages, set fallback to true, otherwise it should be false. 
-- when the fallback is set to true and you visit a page that is not included on the getStaticPaths, then it will be generated in accordance with the default behavior i.e. at runtime. - 
+- when the fallback is set to true and you visit a page that is not included on the getStaticPaths, then it will be generated in accordance with the default behavior i.e. at runtime IF THE GIVEN DATA THAT IS REQUESED EXISTS.
+- IF THE DATA DOES NOT EXIST you need to add an in statement checking if the requested data exists and if not return notFound: true inside of getStaticProps becuase that is where you are fetching the data on request and are able to check whether the requested info exists. 
 
 > IT IS IMPORTANT THAT FOR THOSE PAGES THAT ARE GENERATED AT LOAD TIME,
 > YOU ADD A LOADING STATE TO YOUR REACT COMPONENT AS THE DATA FOR THAT
 > PAGE WILL NOT BE AVALIABLE IMMIDIETLY AND THEREFORE LOADING STATE IS
 > REQUIRED. THIS IS UNLESS YOU SET THE FALLBACK TO 'blocking' WHICH WILL BLOCK THE PAGE FROM DISPLAYING UNTIL IT IS READY TO BE SHOWN TO THE USER
 
-this is therefore a little bit like fetching on the client side but you dont actually have to fetch. Instead, you check whether what is being requested is in the props and if it is not, you show the loading state and once it is there, next will update the component and show the data. 
+this is therefore a little bit like fetching on the client side but you dont actually have to fetch. Instead, you check whether what is being requested is in the props and if it is not, you show the loading state and once it is there, next will update the component and show the data. ---> *for those pages that are not pre-generated, does getStaticProps effectively act like getServerSideProps???? Becuase if the data is not there in the props, how does Next know where to fetch the data from? It must run getStaticProps code to get it hence getStaticProps is triggered at a time other than the build time/validation?*
+
+
 

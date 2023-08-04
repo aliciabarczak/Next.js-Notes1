@@ -224,5 +224,14 @@ GENERATED DYNAMICALLY:
 
 this is therefore a little bit like fetching on the client side but you dont actually have to fetch. Instead, you check whether what is being requested is in the props and if it is not, you show the loading state and once it is there, next will update the component and show the data. ---> *for those pages that are not pre-generated, does getStaticProps effectively act like getServerSideProps???? Becuase if the data is not there in the props, how does Next know where to fetch the data from? It must run getStaticProps code to get it hence getStaticProps is triggered at a time other than the build time/validation?*
 
+# Server Side Rendering
 
+ - useful when you want to pre-render a page on the server on *every request* and you also need access to the request itself which is not possible in pre-generation; 
+ - achieved in Next using serverSideProps(); 
+ - example of usage would be generating a user profile page:
+	 - when the user requests the page, the data would be generated based on which user has made the request 
+	 - you cannot pre-generate this page in advance as you do not want to use [dynamic] pages for this kind of information as you don't want everyone to be able to type in the URL and see profile page of the user 
+	 - getServerSide props will allow you to identify the user that has sent the request because it has access to the request 
+ - syntax: returns the same object as getStaticProps but for the invalidate key which is not needed.
 
+![screenshot-gluki udemy com-2023 08 04-11_14_40](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/113eb747-371f-4369-a44d-0390d2f924c9)

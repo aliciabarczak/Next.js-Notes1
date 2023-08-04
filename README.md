@@ -264,7 +264,7 @@ this is therefore a little bit like fetching on the client side but you dont act
  - this means that you will use getStaticProps to fetch the data at built time and possibility add re-validate key, and then pass that data to the react component. In the react component, you can use the props to initialise data state. The state will obvs be overwritten as soon as useEffect is triggered on the second render which is there the data will be updated but importantly, on the first render you will have useful data to render and include in the source page.
  - any data that is fetched on the client will not be visible in the source page and this is why you need re-validate key as you want to make sure that the page source is as much up-to-date as possible.
 
-    import { useEffect, useState } from 'react';
+     import { useEffect, useState } from 'react';
     import useSWR from 'swr';
     
     function LastSalesPage(props) {
@@ -351,3 +351,4 @@ this is therefore a little bit like fetching on the client side but you dont act
     }
     
     export default LastSalesPage;
+

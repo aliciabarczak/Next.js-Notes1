@@ -396,10 +396,11 @@ this is therefore a little bit like fetching on the client side but you dont act
  - Also requires special JSX which needs to be imported from the same
  - has to follow a special structure as below:
 
-   ![screenshot-gluki udemy com-2023 08 07-15_29_11](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/748bebef-6e9a-44f2-b327-45f0271e2bf0)
+![screenshot-gluki udemy com-2023 08 07-15_37_02](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/4fe9584a-690c-4a12-a101-a612338fb5c1)
 
-- allows you to add attributes to HTML tag or add divs outside of the app component tree - so that would be the same level as the id=root div.
 
-![screenshot-gluki udemy com-2023 08 07-15_37_02](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/6f005ff4-efe1-4ff7-ab15-c245fac31070)
+- allows you to add attributes to HTML tag or add divs outside of the app component tree - so that would be the same level as the id=root div in a normal rect app.
+
+![screenshot-gluki udemy com-2023 08 07-15_48_53](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/c587214e-9dbb-4712-83b5-6e4ae6ed6129)
 
 

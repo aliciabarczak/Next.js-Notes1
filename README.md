@@ -352,3 +352,54 @@ this is therefore a little bit like fetching on the client side but you dont act
 	    
 	    export default LastSalesPage;
 
+# Head Component
+
+ - can be added anywhere in the jsx code, does not have to be added at the top level
+ - stores any html tags that are found in head like title and meta
+ - the content you add to meta with name of description is the content found in the search results
+
+
+![screenshot-gluki udemy com-2023 08 07-15_08_17](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/58785e79-0afb-40b0-8354-0cab925e9125)
+
+## dynamic head content 
+
+ - it is useful to use the actual data being used by the component in the Head to ensure the metadata is specific to the pgae
+
+![screenshot-gluki udemy com-2023 08 07-15_10_37](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/35fcffca-6a23-43d4-b84a-d4f29cce0f37)
+
+
+### re-using Head logic 
+- you can put the Head code into a variable and then use the variable in every instance of the page, for example, all if statements returning errors/messages as well as the primary return statement.
+
+  ![screenshot-gluki udemy com-2023 08 07-15_14_32](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/09b3e2ea-bb96-4acf-89fd-6bfc160aa184)
+
+
+## _app.jsx - app wide settings inside of the app component tree
+
+ - lives in pages folder at root level
+ - root app component inside rendered for every single page that is being displayed. 
+ - allows you to add application wide settings
+ - this means that anything that you include in that file will be displayed on each page.
+ - any head data that you would want to be added to all pages can be added here
+ - if you have the head element set up here as well as on individual pages, Next will merge these together - if there is a conflict, the latest tag wins. 
+ - you can set up general meta/title data in _app.js and then override them if necessary in each page.
+
+![screenshot-gluki udemy com-2023 08 07-15_22_40](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/b6e9f49d-6846-4d54-8928-457dcead7f23)
+
+
+## _document.js - app wide settings outside of the app component tree
+
+ - not there by default but can be added manually 
+ - has to be added in the pages folder at root level
+ - allows to customise all elements that make up the HTML
+ - requires special class component which extends the Document component from Next/Document.
+ - Also requires special JSX which needs to be imported from the same
+ - has to follow a special structure as below:
+
+   ![screenshot-gluki udemy com-2023 08 07-15_29_11](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/748bebef-6e9a-44f2-b327-45f0271e2bf0)
+
+- allows you to add attributes to HTML tag or add divs outside of the app component tree - so that would be the same level as the id=root div.
+
+![screenshot-gluki udemy com-2023 08 07-15_37_02](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/6f005ff4-efe1-4ff7-ab15-c245fac31070)
+
+

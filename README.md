@@ -436,4 +436,20 @@ this is therefore a little bit like fetching on the client side but you dont act
 
 ![screenshot-gluki udemy com-2023 08 08-15_09_47](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/27ebeb17-557b-4e7a-824f-ade1e2b11082)
 
+## Using the context
+
+ - in Next, you should wrap the context provider in the _app.js
+   
+![screenshot-gluki udemy com-2023 08 08-15_13_12](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/f7fab81f-f203-498b-9c4d-b34d912d63c9)
+
+ - however, **you cannot actually access the context inside of _app.js**; only its children components will have access to context, like Layout for example which wraps the entire application. 
+ - Inside of Layout:
+	 - import useContext hook,
+	 - import the context you want to connect with, in this case this was the NotificationContext exported as default in the file where the context was set up
+	 - this then allows you to use that context to show current notification/invoke the set notification function or hide notification function,
+	 - in this instance, we are just accessing the current active notification and rendering the same using a Notification component. 
+
+![screenshot-gluki udemy com-2023 08 08-15_20_16](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/f09a4206-bf8f-4616-a39a-bd59320a637a)
+
+
 

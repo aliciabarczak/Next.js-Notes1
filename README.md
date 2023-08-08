@@ -403,4 +403,37 @@ this is therefore a little bit like fetching on the client side but you dont act
 
 ![screenshot-gluki udemy com-2023 08 07-15_48_53](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/c587214e-9dbb-4712-83b5-6e4ae6ed6129)
 
+# Application wide state in Next.js
+
+ - local state = useState - localised to each componenet 
+ - application wide state - useContext - applies to the entire app - allows you to trigger components from other components 
+
+## Set up context
+
+### create context 
+
+ - this creates the context data that will be shared using the createContext hook and initialises the same.
+
+![screenshot-gluki udemy com-2023 08 08-14_46_27](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/85e864a2-f881-4d33-aa22-212c5cb7b2c6)
+
+
+### create provider 
+
+ - create context allows you to create provider component.
+
+![screenshot-gluki udemy com-2023 08 08-14_49_58](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/7e182822-a38e-4cbf-8628-ada71c3e2f07)
+
+ - the provider component is used to wrap any components which are will have access to the context. In Next, you will want to apply this in the _app.js file
+
+
+ - the provider should also manage all the context related state:
+	- set up new state to keep track of active notification within the context
+	- create the functions which will handle logic for the functions in the context
+	  
+![screenshot-gluki udemy com-2023 08 08-15_02_54](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/aa41d683-36eb-4537-8486-036645db4b29)
+
+ - the provider must return the context object which will be passed as a value in the provider component ie. it will be accessible in all components exposed to it
+
+![screenshot-gluki udemy com-2023 08 08-15_09_47](https://github.com/aliciabarczak/Next.js-Notes1/assets/101208108/27ebeb17-557b-4e7a-824f-ade1e2b11082)
+
 
